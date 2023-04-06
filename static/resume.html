@@ -1,587 +1,423 @@
 <!doctype html>
 <html>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<head>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
+	
 	<title>Cesar Granda</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
-	<style>
-		/********************************************
-* 	reset from
-* 	http://meyerweb.com/eric/tools/css/reset/
-*******************************************/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-}
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+	
+	<style type="text/css">
+	@import url(
+	https://fonts.googleapis.com/css?family=Lato:400,700
+);
 body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/* Custom reset */
-.main-summary p,
-#publications .item,
-#skills .item,
-#languages .item,
-#references .item,
-#interests .item{
-	margin: 0;
-}
-
-
-/****************
-*		SMARTPHONES
-****************/
-em {
-	color: #757575;
-}
-p {
-	margin: 1em 0;
-}
-blockquote {
-	margin: 0;
-	margin-bottom: 1em;
-}
-strong {
-	font-weight: 700;
-	font-size: 1.1em;
-}
-ul {
-	margin-top: 1em;
-}
-div.item {
-	margin: 1em 0 2em;
-	padding-bottom: 2em;
-}
-div.item:last-of-type {
-	margin: 0;
-	border-bottom: none;
-	padding-bottom: 0;
-}
-p {
-	text-align: justify;
-}
-
-
-/* Headers */
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 700;
-}
-h1 {
-	font-size: 2.5rem;
-}
-h2,
-h3 {
-	font-size: 1rem;
+	background: #fff;
+	font-family: Lato, sans-serif;
+	margin: 0 0 80px;
 }
 a {
-	color: #EB5F51;
-	text-decoration: none;
+	color: #2ecc71;
 }
+a:focus,
 a:hover {
-	text-decoration: underline;
-}
-
-/* Layout */
-body {
-	background: #f2f2f2;
-	line-height: 1.6;
-	font-size: 13px;
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-
-#resume {
-	padding: 1rem 0;
-	margin: 1rem auto;
-}
-
-#header {
-	padding: 0 1em;
-	margin-bottom: 1em;
-}
-
-#resume > header div {
-	display: table;
-	padding-left: 0.5em;
-}
-
-#resume > header div.middle {
-	padding-top: 1.5em;
-}
-
-header img {
-	display: block;
-	width: 10em;
-	border-radius: 0.275em;
-	float: right;
-}
-
-header .name {
-	line-height: 1;
-}
-
-header .label {
-	font-size: 1.5rem;
-	font-weight: 400;
-	color: #757575;
-}
-
-section:not(.section) {
-	padding: .5em 1rem;
-}
-
-section#references {
-	border-bottom:none;
-}
-
-section#basics {
-	background: inherit;
-	margin-bottom: 0;
-}
-
-section#skills {
-	padding-bottom: 0;
-}
-
-section#education,
-section#work,
-.main-summary section {
-	padding-bottom: 1em;
-}
-
-header::after {
-	display: table;
-	content: " ";
-	clear: both;
-}
-
-h2.section-title {
-	text-align: left;
-	font-size: 1rem;
-	font-weight: 400;
-	color: #757575;
-	padding: 1em 1rem 0;
-	margin-bottom: 0.1275em;
-}
-
-.date {
-	font-weight: 700;
-	color: #757575;
-}
-
-.position, .area, .institution {
-	font-weight: 700;
-}
-
-#interests .item, #languages .item {
-	padding: 0 1em 1em 0;
-	border-bottom: none;
-}
-
-.website::before {
-	display: inline-block;
-	font: normal normal normal 14px/1 FontAwesome;
-	font-size: inherit;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	color: #f1c40f;
 	text-decoration: none;
-	min-width: 1.25em;
-	margin-right: 0.25em;
-	text-align: center;
-	content: '\f14c';
 }
-
-#profiles, #skills, #interests, #languages {
-	display: -webkit-box;
-	display: -moz-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-flex-flow: row wrap;
-	flex-flow: row wrap;
-	-webkit-justify-content: flex-start;
-	justify-content: flex-start;
-  padding-bottom: 1em;
-}
-
-#profiles, #location {
-	box-shadow: none;
-	padding: 0;
-}
-
-#profiles .item {
+p {
+	line-height: 1.5;
 	margin: 0;
-	padding: 0;
-	padding-right: 1em;
-	border-bottom: none;
 }
-
-#interests ul {
-	margin-top: 0.5em;
+p + p {
+	margin-top: 10px;
 }
-
-#publications .name {
-	font-style: italic;
+h1,
+h2,
+h3,
+h4 {
+	margin-top: 0
 }
-
-.courses li, .keywords li{
-	display: inline-block;
-	background: #f0f0f0;
-	font-size: 0.9em;
-	line-height: 1;
-	color: #333;
-	padding: 0.4em 0.8em;
-	border-bottom: 1px solid #ddd;
-	border-right: 1px solid #ddd;
-	border-radius: 3px;
+section {
+	margin-top: 30px;
 }
-
-#publications .date {
+li {
+	line-height: 1.8;
+	list-style: none;
+}
+li:before {
+	content: "\f052";
+	float: left;
+	font: 13px Octicons;
+	margin-top: 6px;
+	margin-left: -20px;
+	opacity: .1;
+	position: absolute;
+}
+blockquote {
+	border-left: 5px solid #e7e9ec;
+	font-size: 14px;
+}
+em {
+	color: #95a5a6;
 	font-weight: normal;
+	font-style: normal;
+}
+h4 span:first-child {
 	color: #000;
+	font-weight: bold;
+}
+.container {
+	max-width: 750px;
+	padding: 0 30px;
+}
+.col-sm-6 {
+	margin-bottom: 10px;
+}
+.col-sm-12 h4 {
+	margin-top: 12px; 
+}
+.col-sm-12 + .col-sm-12 {
+	margin-top: 30px;
+}
+#header {
+	background: #f4f6f6;
+	padding: 50px 0;
+	margin-bottom: 30px;
+}
+#header h2 {
+	color: #95a5a6;
+	font-size: 24px;
+}
+#content h3 {
+	color: #f1c40f;
+	font-size: 26px;
+	margin-top: -4px;
+}
+#content aside {
+	text-align: right;
+	padding-right: 30px;
+}
+#profiles .network {
+	text-transform: capitalize;
+}
+#work .position,
+#volunteer .position {
+	font-weight: bold;
+	margin-bottom: 8px;
+}
+#education .area {
+	font-weight: bold;
+}
+#education .area:before {
+	content: "\f0d7";
+	font: 16px Octicons;
+	margin-right: 6px;
+}
+#education .studyType {
+	margin-left: 25px;
+}
+#awards .summary,
+#publications .summary {
+	margin-top: 8px;
+}
+#publications .website a:before {
+	content: attr(href);
 }
 
-#skills .item {
-	min-width: 15em;
-	padding: 0 .5em .8em 0;
-	border-bottom: none;
-}
-
-
-/* Skills chart */
-#skills .level .bar {
-	border: 1px solid #ddd;
-	display: block;
-	width: 10em;
-	height: 5px;
-	margin: 0em 0 1em 0;
-	position: relative;
-}
-
-#skills .level .bar::after {
-	position: absolute;
-	content: " ";
-	top: 0;
-	left: 0;
-	background: black;
-	height: 5px;
-}
-
-#skills .level.beginner .bar::after {
-	background: #EB5F51;
-	width: 2.5em;
-}
-
-#skills .level.intermediate .bar::after {
-	background: #ffdf1f;
-	width: 5em;
-}
-
-#skills .level.advanced .bar::after {
-	background: #59C596;
-	width: 7.5em;
-}
-
-#skills .level.master .bar::after {
-	background: #5CB85C;
-	width: 10em;
-}
-
-#references .item {
-	padding-left: 1em;
-	border-left: 5px solid #EB5F51;
-}
-
-.fa.social {
-	margin-right: 0.25em;
-	font-size: 1.1em;
-}
-
-/* Social Media Brand Colors */
-.google-plus {
-	color: #dd4b39;
-}
-
-.tumblr {
-	color:#32506d;
-}
-
-.foursquare {
-	color:  #0072b1;
-}
-
-.facebook {
-	color: #3b5998;
-}
-
-.linkedin {
-	color: #007bb6;
-}
-
-.pinterest {
-	color: #cb2027;
-}
-
-.dribbble {
-	color: #ea4c89;
-}
-
-.instagram {
-	color: #517fa4;
-}
-
-.twitter {
-	color: #00aced;
-}
-
-.soundcloud {
-	color: #ff3a00;
-}
-
-.wordpress {
-	color: #21759b;
-}
-
-.youtube {
-	color: #bb0000;
-}
-
-.github {
-	color: #171515;
-}
-
-.stack-overflow {
-	color: #828386;
-	position: relative;
-}
-
-.flickr {
-	color: #ff0084;
-}
-
-.stack-overflow::after {
-	position: absolute;
-	left: 0;
-	content: '\f16c';
-	color: #f68a1f;
-	overflow: hidden;
-	height: 40%;
-}
-
-/******************
-*		HELPER CLASSES
-******************/
-.fa {
-	min-width: 1.25em;
-	margin-right: 0.25em;
-	text-align: center;
-}
-
-.clear {
-	display: table;
-	clear: both;
-}
-
-
-/****************
-*		TABLET
-****************/
-@media screen and (min-width: 602px) {
-
-	#resume {
-		width: 550px;
-		margin: 0 auto;
+@media (min-width: 480px) {
+	.strike-through {
+		border-top: 1px solid #f4f6f6;
+		height: 20px;
+		margin-top: 12px;
+		margin-bottom: -2px;
+		position: relative;
 	}
-	section > header > h3 {
-		float:left;
-	}
-	section > header > .date {
-		float: right;
-		line-height: 1.3;
-	}
-
-}
-
-
-/****************
-*		LAPTOP
-****************/
-@media screen and (min-width: 1025px) {
-
-	#resume {
-		width: 650px;
-		padding: 3em;
-		margin: 3em auto;
+	.strike-through span,
+	.strike-through a {
 		background: #fff;
-		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+		position: absolute;
 	}
-
-	.section {
-		display: -webkit-box;
-		display: -moz-box;
-		display: -ms-flexbox;
-		display: -webkit-flex;
-		display: flex;
-		-webkit-flex-flow: row wrap;
-		flex-flow: row wrap;
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		margin-bottom: 1em;
-		margin-top: 1em;
-		border-bottom: 1px solid #eee;
+	.strike-through span:first-child {
+		padding-right: 20px;
+		margin-top: -12px;
 	}
-
-	.section:last-of-type {
-		border-bottom: none;
-		margin-bottom: 0;
+	.strike-through span + span {
+		font-size: 14px;
+		margin-top: -10px;
+		padding-left: 20px;
+		right: 0;
 	}
-
-	section > header {
-		line-height: 1;
-		padding-bottom: 1em;
+}
+@media (max-width: 768px) {
+	.col-sm-6:last-child {
+		margin-bottom: 0px;
 	}
-
-	h2.section-title {
-		line-height: 1.1;
-		padding-top: 0;
+	#content aside {
+		margin-bottom: 20px;
+		padding-right: 0;
+		text-align: left;
 	}
-
-	section:not(.section) {
-		width: 34.5em;
-		padding: 0 1em 1em 0;
-		margin-top:0;
-		border: none;
+	#publications .website a:before {
+		content: "View publication";
 	}
-
-	section p {
-		margin: 0;
+}
+@media (max-width: 480px) {
+	h1 {
+		font-size: 26px;
 	}
-
-	section#basics {
-		width: auto;
-		padding-top: 1em;
-		padding-left: 1em;
-		padding-bottom: 0;
-		border-top: 1px solid #eee;
-		border-bottom: 1px solid #eee;
+	.date {
+		font-size: 14px;
+		margin-bottom: 5px;
 	}
-
-	#profiles .item{
-		padding-bottom: 1em;
+	.strike-through span:first-child {
+		margin-bottom: 7px;
 	}
-
-	div {
-		padding: 0;
+	.strike-through span {
+		display: block;
+	}	
+	#header {
+		margin-bottom: 10px;
+		padding: 40px 0;
 	}
-
-	#skills .item {
-		padding-left:0;
-		margin-top: 0;
+	#actions {
+		display: none;
 	}
-
-	div.item {
-		margin-top: 0;
-		border-bottom: 1px solid #eee;
-	}
-
 }
 
 	</style>
-
-
+	
+	</head>
 	<body>
-		<div id="resume">
-				<header id="header">
-						<div>
-							<h1 class="name">Cesar Granda</h1>
-							<h2 class="label">Web Developer at Baruch College</h2>
-						</div>
+	
+	<header id="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9 col-sm-push-3">
+					<h1>
+						Cesar Granda
+					</h1>
+					<h2>
+						Web Developer at Baruch College
+					</h2>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div id="content" class="container">
 
-				</header>
-
-				<section id="basics">
-
-						<div id="location">
-							<span class="fa fa-map-marker"></span>
-							<span class="address">
-								90-31 Whitney Ave,
-							</span>
-							<span class="postalCode">
-								11373,
-							</span>
-							<span class="city">
-								Elmhurst 
-							</span>
-							<span class="countryCode">
-								(USA),
-							</span>
-							<span class="region">
-								NY
-							</span>
-						</div>
-
-					<div id="contact">
-						<div class="website">
-							<a href="http://cgranda.com">http://cgranda.com</a>
+	<section id="contact" class="row">
+		<aside class="col-sm-3">
+			<h3>Contact</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-6">
+				<strong>Email</strong>
+				<div class="email">info@cgranda.com</div>
+			</div>
+			<div class="col-sm-6">
+				<strong>Website</strong>
+				<div class="website">
+					<a href="http://cgranda.com">http://cgranda.com</a>
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	<section id="about" class="row">
+		<aside class="col-sm-3">
+			<h3>About</h3>
+		</aside>
+		<div class="col-sm-9">
+			<p>A senior web developer with 7+ years of experience in front-end and back-end development. I possess a comprehensive understanding of WordPress, PHP and JavaScript. I am Passionate about building excellent applications utilizing innovative solutions.</p>
+		</div>
+	</section>
+	<section id="profiles" class="row">
+		<aside class="col-sm-3">
+			<h3>Profiles</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+				<div class="col-sm-6">
+					<strong class="network">
+						LinkedIn
+					</strong>
+					<div class="username">
+						<div class="url">
+							<a href="https://www.linkedin.com/in/cesar-granda/">Cesar Granda</a>
 						</div>
 					</div>
-
-
-				</section>
-
-				<section class="section main-summary">
-					<h2 class='section-title'>About</h2>
-					<section>
-						<p>A senior web developer with 7+ years of experience in front-end and back-end development. I possess a comprehensive understanding of WordPress, PHP and JavaScript. I am Passionate about building excellent applications utilizing innovative solutions.</p>
-					</section>
-				</section>
-
-				</section>
-
-
-
-
-
-
-
-
-
-
+				</div>
+			</div>
 		</div>
-	</body>
+	</section>
 
+	<section id="work" class="row">
+		<aside class="col-sm-3">
+			<h3>Work</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>CUNY Baruch College</span>
+					<span class="date">
+						2018-08 — Present
+					</span>
+				</h4>
+				<div class="position">
+					Lead Web Developer
+				</div>
+				<div class="summary">
+					<p></p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Developed a faculty profile App used to display faculty profiles with a back-end connected to an Oracle database, which imported daily data from a third-party JSON API, and coded the front-end of the App using SQL, JavaScript and a custom PHP framework.</li>
+					<li class="bullet">Worked on .NET application using C#, SQL and an Oracle database which students used to schedule exam proctoring.</li>
+					<li class="bullet">Developed applications and websites with adherence to ADA and WCAG guidelines on accessibility.</li>
+					<li class="bullet">Developed sites using WordPress Multisite and utilizing Custom Post Types (CPT) and Advanced Custom Fields(ACF) in order fulfill institutional requirements.</li>
+					<li class="bullet">Migrated legacy content from thousands of static HTML files into MySQL database using PHP and SQL so editors could modify the content using WordPress.</li>
+					<li class="bullet">Maintained documentation of all WordPress plugins and features in a wiki that over 40 content editors used as guides. </li>
+					<li class="bullet">Created a tuition calculator to display tuition costs to prospective students using JavaScript, PHP and SCSS.</li>
+					<li class="bullet">Developed a search app for the Library that retrieved data from multiple third-party software and API’s so students could find library materials for their specific needs.</li>
+					<li class="bullet">Coded a WordPress plugin to connect to Twitter&#x27;s API in order to display tweets on the Library website that informed students of updates.</li>
+					<li class="bullet">Coded third party apps to match the Library website design using HTML, CSS and JavaScript.</li>
+					<li class="bullet">Tasked with implementing a git workflow for all projects in development.</li>
+					<li class="bullet">Held regular training sessions on content editing, plugin usage and general troubleshooting for content editors.</li>
+					<li class="bullet">Held regular meetings with stakeholders of various departments to gather requirements and vision in order to create a project scope and project timeline.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Uchiha LLC</span>
+					<span class="date">
+						2016-08 — 2018-02
+					</span>
+				</h4>
+				<div class="position">
+					Senior Web Developer
+				</div>
+				<div class="summary">
+					<p></p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Met with clients to discuss their project needs and deliverables.</li>
+					<li class="bullet">Taught a team to do WordPress installations through the implementation of MySQL, phpMyAdmin, WP CLI and server environment setups.</li>
+					<li class="bullet">Worked with a team of 10 people consisting of Art Director, Designers, coders and interns on various projects.</li>
+					<li class="bullet">Set-up and maintained Linux servers used on all projects.</li>
+					<li class="bullet">Developed apps using Node.js,  React, and Express.</li>
+					<li class="bullet">Developed web sites using Laravel, Bootstrap, and JQuery.</li>
+					<li class="bullet">Coded all apps and websites using the MVC development model.</li>
+					<li class="bullet">Developed e-commerce sites in WordPress, Squarespace and Shopify.</li>
+					<li class="bullet">Used Adobe suite programs to create images, icons and vector graphics for websites and apps.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Team 7 Media Inc</span>
+					<span class="date">
+						2014-11 — 2016-06
+					</span>
+				</h4>
+				<div class="position">
+					Junior Web Developer
+				</div>
+				<div class="summary">
+					<p></p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Created landing pages for products and services using PHP, JavaScript, HTML and CSS.</li>
+					<li class="bullet">Utilized GIT on all project development.</li>
+					<li class="bullet">Worked in cPanel to create projects for clients.</li>
+					<li class="bullet">Developed apps and websites using Bootstrap on all projects.</li>
+					<li class="bullet">Developed apps and websites using Laravel as the back-end framework on all projects.</li>
+					<li class="bullet">Developed e-stores on different platforms like Shopify, Squarespace and WordPress.</li>
+					<li class="bullet">Integrated customer relationship management (CRM) software into e-stores to control checkout process, cart abandonment and customer re-targeting.</li>
+					<li class="bullet">Created website for clients ranging from Dentists to Video marketing firms.</li>
+					<li class="bullet">Used Adobe suite programs to create images, icons and vector graphics for websites and apps.</li>
+					<li class="bullet">Used Adobe Premier to create and edit videos and commercials used in Online marketing.</li>
+				</ul>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>Team 7 Media Inc</span>
+					<span class="date">
+						2011-08 — 2014-10
+					</span>
+				</h4>
+				<div class="position">
+					Junior Web Developer
+				</div>
+				<div class="summary">
+					<p></p>
+				</div>
+				<h4>Highlights</h4>
+				<ul class="highlights">
+					<li class="bullet">Worked alongside Art Director in creating high end luxury sites implementing WordPress with HTML, PHP and CSS.</li>
+					<li class="bullet">Developed landing pages for Beauty Salons across the U.S.A that sold vouchers to customers.</li>
+					<li class="bullet">Utilized Salesforce to facilitate project management.</li>
+					<li class="bullet">Used Dreamweaver for developing websites using HTML, PHP and CSS.</li>
+					<li class="bullet">Designed ads using Photoshop that were used to promote Salon services.</li>
+					<li class="bullet">Developed Ads using HTML and CSS that consumers clicked on and purchased products.</li>
+					<li class="bullet">Developed on an Ecommerce platform utilizing PHP, HTML and CSS.</li>
+				</ul>
+			</div>
+			</div>
+		</div>
+	</section>
+
+	
+	<section id="education" class="row">
+		<aside class="col-sm-3">
+			<h3>Education</h3>
+		</aside>
+		<div class="col-sm-9">
+			<div class="row">
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>NYIT</span>
+					<span class="date">
+						2015-09 — 2017-06
+					</span>
+				</h4>
+				<div class="area">
+					Communication Arts
+				</div>
+				<div class="studyType">
+					Masters
+				</div>
+			</div>
+			<div class="col-sm-12">
+				<h4 class="strike-through">
+					<span>NY City Tech CUNY</span>
+					<span class="date">
+						2007-09 — 2011-06
+					</span>
+				</h4>
+				<div class="area">
+					Graphic Arts Management
+				</div>
+				<div class="studyType">
+					Bachelors
+				</div>
+			</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	
+
+
+	
+
+	</div>
+	
+	</body>
 </html>
